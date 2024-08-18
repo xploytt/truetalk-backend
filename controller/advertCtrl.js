@@ -1,5 +1,5 @@
 import { where } from "sequelize";
-import advert from "../data/advert.js";
+// import advert from "../data/advert.js";
 import { Advert } from "../models/m_adverts.js";
 
 export const getAdverts = async (req, res) => {

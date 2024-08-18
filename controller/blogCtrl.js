@@ -1,15 +1,14 @@
-import blogData from "../data/pseudoBlog.js";
 import { Blog } from "../models/m_blogs.js";
 
 export const getAllBlogs = (req, res, next) => {
   res.status(200);
-  res.json(blogData);
+  res.json([]);
 };
 
 export const getBlog = (req, res, next) => {
   const { blogId } = req.params;
   let blogMsg;
-  blogData.forEach(({ pk, title }, i) => {
+  [].forEach(({ pk, title }, i) => {
     pk == blogId ? (blogMsg = title) : {};
   });
 
